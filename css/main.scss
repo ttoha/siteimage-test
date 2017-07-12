@@ -1,0 +1,118 @@
+@import "compass/css3";
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+body {
+    color:#8d8d8d;
+    margin:80px 0 0 0; padding:0;
+    font-size:14px;
+    font-family:"Times New Roman", Georgia, Serif;
+}
+
+.h3, .h4 {
+    color:#000;
+    margin:0; padding:0;
+    font-family:Tahoma, Geneva, sans-serif;
+}
+.h3 {
+    font-size:21px;
+}
+.h4 {
+    font-size:18px;
+}
+
+.article-icons {
+    margin:25px 0 22px; padding:0 40px 0 10px;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+}
+.article-icons-item {
+    display:flex;
+    align-items:center;
+}
+.article-icons .icons {
+    display:inline-block;
+    margin-right:10px;
+}
+.article-icons-text {
+    color:#000
+}
+
+.button {
+    display:inline-block;
+    padding:5px 25px 8px;
+    border:none;
+    color:#fff;
+    font-size:13px;
+    line-height:17px;
+    font-family:Tahoma, Geneva, sans-serif;
+    text-decoration:none;
+    @include border-radius(1px);
+    @include background-image(linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,.18)));
+}
+.button:hover {
+    @include background-image(linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,0)));
+}
+.button__red {
+    background-color: #da4137;
+}
+@import "compass/utilities/sprites";
+@import "icons/*.png";
+@include all-icons-sprites(true);
+
+.news {
+    width:840px;
+    margin:0 auto;
+}
+
+.news-article {
+    margin-bottom:15px;
+    @include clearfix();
+}
+
+.news-img-block {
+    float:left;
+    margin-right:20px
+}
+
+.news-article-img {
+    float:left;
+    @include box-shadow(0 0 5px rgba(0,0,0,.25));
+}
+
+.news-content {
+    @include clearfix();
+}
+
+.news-article-title {
+    margin-bottom:5px;
+    line-height:23px
+}
+
+.news-desc {
+    line-height:20px;
+}
+
+.news-article__big {
+    padding:20px 30px;
+    background-color:#f0f0f0;
+    margin-bottom:25px;
+
+    .news-article-title {
+        margin-bottom:8px;
+        line-height:28px
+    }
+}
+
+.news-article .button {
+    margin-top:8px;
+}

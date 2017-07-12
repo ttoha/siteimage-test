@@ -1,0 +1,23 @@
+{
+  "name": "siteimage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Anton Hryb",
+  "license": "ISC",
+  "devDependencies": {
+    "compass": "^0.1.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-newer": "^1.2.0",
+    "node-sass": "^3.11.1"
+  }
+}
